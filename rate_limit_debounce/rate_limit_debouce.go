@@ -2,9 +2,10 @@ package rate_limit_debounce
 
 import (
 	"fmt"
-	"golang.org/x/time/rate"
 	"sync"
 	"time"
+
+	"golang.org/x/time/rate"
 )
 
 func DebounceWithRateLimit(f func(string), d time.Duration, r *rate.Limiter) func(string) {
